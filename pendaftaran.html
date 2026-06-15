@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Siswa Baru</title>
+    <link rel="stylesheet" href="pendaftaran.css" />
+    <link
+      rel="icon"
+      href="logoo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="logo2.png" alt="Logo Sekolah" class="logo" />
+        <h1>Pendaftaran Siswa Baru</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <form id="registrationForm">
+          <h2>Data Pribadi Siswa</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Nama Lengkap:</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="Nama Lengkap"
+              />
+              <div class="error-message" id="fullName-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="dob">Tanggal Lahir:</label>
+              <input type="date" id="dob" name="dob" required />
+              <div class="error-message" id="dob-error"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gender">Jenis Kelamin:</label>
+              <select id="gender" name="gender" required>
+                <option value="">Pilih</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+              <div class="error-message" id="gender-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="grade">Kelas yang Dituju:</label>
+              <select id="grade" name="grade" required>
+                <option value="">Pilih</option>
+                <option value="Kelas 10">Kelas 10</option>
+                <option value="Kelas 11">Kelas 11</option>
+                <option value="Kelas 12">Kelas 12</option>
+              </select>
+              <div class="error-message" id="grade-error"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Alamat Lengkap:</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              required
+              placeholder="Jl. Contoh No. 123, Kota Contoh"
+            ></textarea>
+            <div class="error-message" id="address-error"></div>
+          </div>
+
+          <h2>Informasi Kontak</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="email@contoh.com"
+              />
+              <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Nomor Telepon (WhatsApp):</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                pattern="[0-9]{10,15}"
+                placeholder="Contoh: 081234567890"
+              />
+              <small>Format: 08xxxxxxxxxx (10-15 digit angka)</small>
+              <div class="error-message" id="phone-error"></div>
+            </div>
+          </div>
+
+          <h2>Data Orang Tua/Wali</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentName">Nama Lengkap Orang Tua/Wali:</label>
+              <input
+                type="text"
+                id="parentName"
+                name="parentName"
+                required
+                placeholder="Nama Lengkap Orang Tua/Wali"
+              />
+              <div class="error-message" id="parentName-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="parentPhone">Nomor Telepon Orang Tua/Wali:</label>
+              <input
+                type="tel"
+                id="parentPhone"
+                name="parentPhone"
+                required
+                pattern="[0-9]{10,15}"
+                placeholder="Contoh: 081122334455"
+              />
+              <div class="error-message" id="parentPhone-error"></div>
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms"
+              >Saya menyetujui
+              <a href="#" target="_blank">Syarat dan Ketentuan</a>
+              pendaftaran.</label
+            >
+            <div class="error-message" id="terms-error"></div>
+          </div>
+
+          <button type="submit">Daftar Sekarang</button>
+          <button class="tombol-kembali"><a href="index.html">Kembali Halaman Utama</a></button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-section footer-about">
+          <img
+            class="footer-logo"
+            src="logoo.png"
+            alt="Logo MA Al-Islam Jamsaren"
+          />
+          <h3>MA AL-ISLAM JAMSAREN</h3>
+          <p>
+            Mewujudkan lulusan yang berilmu, berakhlak mulia, mandiri, dan
+            berkontribusi positif.
+          </p>
+        </div>
+
+        <div class="footer-section footer-schedule">
+          <h4>Jadwal Sekolah</h4>
+          <ul>
+            <li>Senin - Jumat: 07:00 - 15:30</li>
+            <li>Sabtu: 07:00 - 12:00</li>
+            <li>Minggu: Libur</li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-activities">
+          <h4>Ekstrakurikuler</h4>
+          <ul>
+            <li>Dewan Ambalan</li>
+            <li>Paskibra</li>
+            <li>Pecinta Alam</li>
+            <li>Hadrah</li>
+            <li>Kerohanian Islam</li>
+            <li>Pencak Silat</li>
+            <li>Futsal</li>
+            <li>Archery</li>
+            <li>Bulu Tangkis</li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-contact">
+          <h4>Kontak & Lokasi</h4>
+          <p>Jl. Jamsaren, Surakarta</p>
+          <p>Telp: (0271) 3867-8903</p>
+          <div class="social-media">
+            <a href="https://instagram.com/vill_zaenz"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://t.me/Zaenadhwa"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="https://x.com/zn182388?t=L5N8qU-B2jPmHxwKfEAgYA&s=09"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://facebook.com/Ory Azan"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-section footer-maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15819.77999976659!2d110.79656388715819!3d-7.580966199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1670e26d3fed%3A0xa20c21bc7813d45b!2sMA%20Al-Islam%20Jamsaren%20Surakarta!5e0!3m2!1sid!2sid!4v1763377708600!5m2!1sid!2sid"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 MA Al-Islam Jamsaren Surakarta. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <script src="pendaftaran.js"></script>
+  </body>
+</html>

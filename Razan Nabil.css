@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: rgba(62, 226, 62, 0.863);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: 0.4s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgba(62, 226, 62, 0.863);
+    border-bottom: 3px solid rgba(62, 226, 62, 0.863);
+}
+
+@media (max-width: 995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgba(62, 226, 62, 0.863);
+        border-bottom: 3px solid rgba(62, 226, 62, 0.863);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(62, 226, 62, 0.863);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        padding: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5 rem solid rgba(62, 226, 62, 0.863);
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: rgba(62, 226, 62, 0.863);
+}
+
+.home-content h3 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 700;    
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgba(62, 226, 62, 0.863);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgba(62, 226, 62, 0.863);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease; 
+    color: rgba(62, 226, 62, 0.863);
+}
+
+.social-icons a:hover {
+    background-color: rgba(62, 226, 62, 0.863);
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px solid rgba(62, 226, 62, 0.863);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgba(62, 226, 62, 0.863);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 0.2rem solid rgba(62, 226, 62, 0.863);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(62, 226, 62, 0.863);
+    color: black;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 25px solid rgba(62, 226, 62, 0.863);
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Pelajar di SMKN 5";
+    color: rgba(62, 226, 62, 0.863);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 0.5rem);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 3px solid rgba(62, 226, 62, 0.863);
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(62, 226, 62, 0.863);
+    margin: 2rem 0;
+}
+
+
+.about{
+    background-color: black;
+    margin-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 5rem 9% 5rem;
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+    height: auto;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.about h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(62, 226, 62, 0.863);
+    margin-top: 5rem;
+}
+
+.about-content p {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.baris-2 {
+    margin-top: -3rem;
+}
+
+.contact {
+    background-color: black;
+    margin-bottom: 5rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(62, 226, 62, 0.863);
+    margin-top: 5rem;
+}
+
+
+.contact-content p {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+}
