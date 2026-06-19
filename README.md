@@ -32,6 +32,8 @@ Run the application:
 ```bash
 python app.py
 ```
+## Live Demo
+https://zaen-dev15.github.io/school-registration-system/
 
 ## Author
 
